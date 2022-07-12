@@ -8,8 +8,7 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Abstract
 {
-    public interface ICarDal : IEntityRepository<Car>
+    public interface IUserDal: IEntityRepository<User>
     {
-        List<CarDetailDto> GetCarDetails();
     }
 }
