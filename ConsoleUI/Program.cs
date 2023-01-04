@@ -24,12 +24,16 @@ namespace ConsoleUI
             foreach (var rental in rentalManager.GetRentalsDetail().Data)
             {
                 Console.WriteLine("{0} / {1} / {2} /     {3}--->>>{4}--->>>{5}  ", rental.FirstName,rental.BrandName,rental.DailyPrice,rental.Email,
-                    rental.RentDate,rental.ReturnDate); 
+                    rental.RentDate,rental.ReturnDate);
 
 
             }
 
-            
+
+
+
+
+
 
 
 

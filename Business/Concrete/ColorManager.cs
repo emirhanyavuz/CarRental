@@ -20,7 +20,7 @@ namespace Business.Concrete
 
         }
 
-        public Result Add(Color color)
+        public IResult Add(Color color)
         {
             if (color.Name.Length < 2)
             {
@@ -31,7 +31,7 @@ namespace Business.Concrete
             return new SuccessResult(Messages.ColorAdded);
         }
 
-        public Result Delete(Color color)
+        public IResult Delete(Color color)
         {
             _colorDal.Delete(color);
             return new SuccessResult();
@@ -48,7 +48,7 @@ namespace Business.Concrete
             return new SuccessDataResult<Color>(_colorDal.Get(c => c.Id == id),Messages.ColorListed);
         }
 
-        public Result Update(Color color)
+        public IResult Update(Color color)
         {
             _colorDal.Update(color);
             return new SuccessResult();
